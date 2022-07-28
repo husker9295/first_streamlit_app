@@ -23,10 +23,8 @@ my_fruit_list = my_fruit_list.set_index('Fruit')
 fruits_selected = streamlit.multiselect("Pick some fruits:", list(my_fruit_list.index),['Avocado','Strawberries'])
 fruits_to_show = my_fruit_list.loc[fruits_selected]
  
- 
- 
+
 # Display the table on the page.
-#streamlit.dataframe(my_fruit_list)
 streamlit.dataframe(fruits_to_show)
 
 #Function
@@ -56,7 +54,7 @@ def get_fruit_load_list ():
   return my_cur.fetchall()
  
 #Add a Button to load the fruit
-if streamlit.button('Get Fruit List'):
+if streamlit.button('Get Fruit Load List'):
  my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
  my_data_rows = get_fruit_load_list()
  streamlit.dataframe(my_data_rows)
