@@ -4,7 +4,7 @@ import pandas;
 import requests;
 
 import snowflake.connector;
-
+from urllib.error import URLError
 
 streamlit.title('My Parents New Health Diet');
 
@@ -56,6 +56,8 @@ my_cur.execute("SELECT * from fruit_load_list")
 my_data_rows = my_cur.fetchall()
 streamlit.header("The Fruit load list contains:")
 streamlit.dataframe(my_data_rows)
+
+streamlit.stop()
 
 #Allow user to add a fruit to the list
 
