@@ -67,6 +67,6 @@ def add_fruit_list(add_fruit):
  
  #Allow user to add a fruit to the list
 add_fruit = streamlit.text_input('What fruit would you like to add to the list?','') 
-add_fruit_list(add_fruit)
+ret_val = add_fruit_list(add_fruit)
 
  
