@@ -62,6 +62,7 @@ if streamlit.button('Get Fruit Load List'):
 def add_fruit_list(add_fruit):
   with my_cnx.cursor() as my_cur:
    sql_str = "insert into fruit_load_list values ('" + fruit +"')"
+   streamlit.text (sql_str)
    my_cur.execute(sql_str)
    return "Thanks for adding " + add_fruit
  
