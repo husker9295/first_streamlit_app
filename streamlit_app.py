@@ -1,7 +1,9 @@
 
 import streamlit;
 import pandas;
-import requests
+import requests;
+
+import snowfalke.connector;
 
 
 streamlit.title('My Parents New Health Diet');
